@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="tree/favicon.png" type="image/svg+xml">
+    <style type='text/css'>
+        @font-face {
+            font-family: "Shin-Go";
+            src: url("tree/ShinGoStripped.otf") format("opentype");
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Shin-Go', sans-serif;
+            font-size: 14pt; /* Base font size */
+            background-color: #edbb43;
+            background-image: url('tree/bg.jpg');
+            background-repeat: repeat;
+            color: white;
+        }
+
+        a {
+            text-decoration: none; /* Removes underline from links */
+            color: inherit; /* Ensures link color matches surrounding text */
+        }
+
+        .logo {
+            text-align: center;
+            padding: 150px 0 75px; /* Increased padding for logo */
+        }
+
+        .logo img {
+            width: 150px; /* Increased logo size */
+        }
+
+		.tiles {
+			max-width: 1440px; /* Set a maximum width for the grid */
+			margin: auto;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr); /* Maximum of 3 columns */
+			gap: 15px; /* Space between tiles */
+			padding: 20px; /* Padding around the grid */
+			align-items: stretch; /* Ensure all tiles in a row stretch to the height of the tallest tile */
+		}
+
+		.tile {
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 15px; /* Increased padding */
+			box-sizing: border-box;
+			transition: background 0.25s ease;
+			color: white;
+			border-radius: 15px; /* Increased border-radius */
+			display: flex; /* Flexbox for content alignment */
+			align-items: center; /* Center align items vertically */
+			justify-content: center; /* Center align items horizontally */
+			min-height: 120px; /* Set a minimum height for the tile */
+		}
+
+		.tile-body {
+			margin-left: 10px; /* Space between thumbnail and text */
+			flex: 1; /* Allows body to take available space */
+			display: flex; /* Allow flex properties for the body */
+			flex-direction: column; /* Stack title and content vertically */
+			justify-content: center; /* Center align title and content vertically */
+		}
+
+		.tile-title {
+			font-weight: bold; /* Make title bold */
+		}
+
+		.tile-content {
+			font-size: 0.9em; /* Adjust content font size if needed */
+		}
+
+		@media (max-width: 900px) {
+			.tiles {
+				grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+			}
+		}
+
+		@media (max-width: 600px) {
+			.tiles {
+				grid-template-columns: 1fr; /* 1 column for mobile screens */
+			}
+		}
+
+        .tile:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .tile-hdr {
+            font-weight: bold;
+            margin: 0; /* Reset margin for header */
+        }
+
+		.tile-thumb {
+			width: 3.5em; /* Set the width to 3.5em */
+			height: 3.5em; /* Set the height to 3.5em */
+			background-size: contain; /* Ensure the image fits within the bounds */
+			background-position: center; /* Center the image */
+			background-repeat: no-repeat; /* Prevent the image from repeating */
+		}
+
+        h3 {
+            width: 100%; /* Ensures headings take full width */
+            margin: 20px 0; /* Adds space around headings */
+            text-align: center; /* Center-aligns headings */
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 12pt; /* Adjusts font size for smaller screens */
+            }
+
+            .logo img {
+                width: 100px; /* Adjusts logo size for smaller screens */
+            }
+
+            .tile {
+                height: 180px; /* Adjust height for smaller screens if needed */
+            }
+        }
+    </style>
+    <title>Perseus' Study</title>
+</head>
+<body>
+    <div class='logo'>
+        <img src='tree/study.png' alt="Logo">
+    </div>
+    <h3>Links</h3>
+    <div class='tiles'>
+        <a href='https://blog.lscstudy.us.kg'>
+            <div class='tile'>
+                <div class='tile-thumb' style='background-image: url("tree/repo.svg")'>&nbsp;</div>
+                <div class='tile-body'>
+                    <div class='tile-hdr'>Blog</div>
+                    <div>I write blogs about the various things that occur to me.</div>
+                </div>
+            </div>
+        </a>
+        <a href='https://docs.lscstudy.us.kg'>
+            <div class='tile'>
+                <div class='tile-thumb' style='background-image: url("tree/log.svg")'>&nbsp;</div>
+                <div class='tile-body'>
+                    <div class='tile-hdr'>Documentation</div>
+                    <div>I write guidelines or discoveries here.</div>
+                </div>
+            </div>
+        </a>
+        <a href='https://perseusstudy.us.kg'>
+            <div class='tile'>
+                <div class='tile-thumb' style='background-image: url("tree/home.svg")'>&nbsp;</div>
+                <div class='tile-body'>
+                    <div class='tile-hdr'>Website</div>
+                    <div>A work-in-progress website for Perseus' Study.</div>
+                </div>
+            </div>
+        </a>
+        <a href='https://lasalle.edu.hk'>
+            <div class='tile'>
+                <div class='tile-thumb' style='background-image: url("tree/lasalle.png")'>&nbsp;</div>
+                <div class='tile-body'>
+                    <div class='tile-hdr'>La Salle College</div>
+                    <div>Offical website for La Salle College</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <h3>Projects</h3>
+    <div class='tiles'>
+        <a href='https://github.com/PerseusInLSC/Crab-Game-Computer'>
+            <div class='tile'>
+                <div class='tile-thumb' style='background-image: url("tree/crab.gif")'>&nbsp;</div>
+                <div class='tile-body'>
+                    <div class='tile-hdr'>Crab Game</div>
+                    <div>A Scratch-based Ball-avoiding game.</div>
+                </div>
+            </div>
+        </a>
+        <a href='https://docs.lscstudy.us.kg/post/An%20incomplete%20Table%20of%20contents%20of%20Resources.html'>
+            <div class='tile'>
+                <div class='tile-thumb' style='background-image: url("tree/notepad.svg")'>&nbsp;</div>
+                <div class='tile-body'>
+                    <div class='tile-hdr'>Table of Contents</div>
+                    <div>An Imcomplete Table of Contents of Resources from Perseus' Study.</div>
+                </div>
+            </div>
+        </a>
+        <a href='https://docs.lscstudy.us.kg/assets/files/An%20incomplete%20Table%20of%20Contents%20of%20Resources/JOAL_Gen_Audio_Link.html'>
+            <div class='tile'>
+                <div class='tile-thumb' style='background-image: url("tree/link.svg")'>&nbsp;</div>
+                <div class='tile-body'>
+                    <div class='tile-hdr'>JOAL Audio Link Generator</div>
+                    <div>An Audio Link Generator for Junior Oxford Advanced Listening.</div>
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
